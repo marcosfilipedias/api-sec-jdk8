@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +21,7 @@ import lombok.Setter;
 @Table(name = "USERS")
 @AllArgsConstructor
 @NoArgsConstructor
-public class User implements Serializable{
+public class User implements Serializable {
 
 	/**
 	 * 
@@ -44,7 +45,7 @@ public class User implements Serializable{
 	@Column(name = "STATUS")
 	@Getter @Setter private Boolean status;
 	
-	@ManyToOne()
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="PROFILE")
 	@Getter @Setter private Profile profile;
 

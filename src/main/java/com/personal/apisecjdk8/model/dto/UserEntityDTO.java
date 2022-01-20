@@ -1,5 +1,7 @@
 package com.personal.apisecjdk8.model.dto;
 
+import com.personal.apisecjdk8.model.Profile;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,6 +27,6 @@ public class UserEntityDTO {
 	private Boolean status;
 
 	@Getter @Setter
-	private Long idProfile;
+	private Profile profile;
 	
 }

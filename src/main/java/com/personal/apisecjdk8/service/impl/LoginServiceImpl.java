@@ -36,7 +36,7 @@ public class LoginServiceImpl implements LoginService{
 				userAuthenticationToken.setDetails(user.getId());
 				SecurityContextHolder.getContext().setAuthentication(userAuthenticationToken);
 				
-				return tokenProvider.createToken(userAuthenticationToken, userAuth, system, user.getProfile().getId());
+				return tokenProvider.createToken(userAuthenticationToken, userAuth, system, user.getProfile().getId().intValue());
 			}else {
 				throw new InvalidLoginException("Invalid Password!");
 			}
