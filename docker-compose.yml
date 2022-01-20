@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  
+  database:
+    container_name: postgresql
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=Dias2019
+      - POSTGRES_DB=api-security
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgresql:/var/lib/postgresql
+      - ./postgresql/data:/var/lib/postgresql/data
+    networks:
+      - security
+    
+networks:
+  security:
+    driver: bridge
