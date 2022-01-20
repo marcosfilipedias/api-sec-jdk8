@@ -8,7 +8,7 @@ on:
     types: [created]
   pull_request:
     branches:
-    - master
+    - main
     - release/*
   push:
     branches:
