@@ -38,5 +38,5 @@ public class Profile implements Serializable{
 	@Getter @Setter private String name;
 
 	@OneToMany(mappedBy = "profile")
-	private List<Profile> telefones;
+	private List<Profile> profile;
 }
