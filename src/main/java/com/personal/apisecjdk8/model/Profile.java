@@ -30,7 +30,7 @@ public class Profile implements Serializable{
 	@Basic(optional = false)
 	@Column(name = "ID")
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	@Getter @Setter private Integer id;
+	@Getter @Setter private Long id;
 	
 	@Column(name = "NAME")
 	@Getter @Setter private String name;

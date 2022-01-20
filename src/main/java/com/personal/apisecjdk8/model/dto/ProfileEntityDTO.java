@@ -10,7 +10,7 @@ import lombok.Setter;
 public class ProfileEntityDTO {
 
 	@Getter @Setter
-	private Integer id;
+	private Long id;
 	
 	@Getter @Setter
 	private String name;
