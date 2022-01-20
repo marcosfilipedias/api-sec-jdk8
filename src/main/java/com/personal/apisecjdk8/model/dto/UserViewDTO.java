@@ -22,6 +22,6 @@ public class UserViewDTO {
 	private Boolean status;
 	
 	@Getter @Setter
-	private Integer idProfile;
+	private Long idProfile;
 
 }
